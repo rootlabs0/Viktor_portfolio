@@ -117,9 +117,18 @@ function SignatureOverlay({ active, onExited }: { active: boolean; onExited: () 
 
 // ─── Nav ────────────────────────────────────────────────────────────────────
 
-const NAV_ITEMS = ['home', 'about', 'contact', 'subscribe'] as const
+const NAV_ITEMS = [
+  { label: 'home',    targetId: null },
+  { label: 'about',   targetId: 'about' },
+  { label: 'contact', targetId: 'contact' },
+] as const
 
 function Nav() {
+  const scrollTo = (id: string | null) => {
+    if (!id) return
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <nav
       style={{
@@ -133,11 +142,12 @@ function Nav() {
         whiteSpace: 'nowrap',
       }}
     >
-      {NAV_ITEMS.map((item) => {
-        const active = item === 'home'
+      {NAV_ITEMS.map(({ label, targetId }) => {
+        const active = label === 'home'
         return (
           <button
-            key={item}
+            key={label}
+            onClick={() => scrollTo(targetId)}
             style={{
               borderRadius: 999,
               border: active ? '1.5px solid transparent' : '1.5px solid rgba(255,255,255,0.5)',
@@ -158,7 +168,7 @@ function Nav() {
               if (!active) (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.08)'
             }}
           >
-            {item}
+            {label}
           </button>
         )
       })}

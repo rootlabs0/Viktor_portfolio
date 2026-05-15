@@ -31,6 +31,7 @@ function FadeIn({
 export default function About() {
   return (
     <section
+      id="about"
       style={{
         backgroundColor: '#0a0a0a',
         color: '#e8e4de',
@@ -51,7 +52,7 @@ export default function About() {
               marginBottom: '3.5rem',
             }}
           >
-            Viktor Zatloukal — Enthusiast into photography
+            About My Work
           </p>
         </FadeIn>
 
@@ -101,18 +102,17 @@ export default function About() {
                 maxWidth: '42ch',
               }}
             >
-              I live in the moment and capture the emotion
+              What I like about photography is that it allows me to just go out and feel free. Wether I look for a creative compostion in the city, or capture a candid moment between people, I just enjoy the process of creating something that looks good to me. I don't have a specific style or subject that I shoot. I just try to follow my instincts and shoot what feels right in the moment. 
               <br /><br />
-              I p
+             
             </p>
           </FadeIn>
 
           <FadeIn delay={0.18}>
             <div>
               {[
-                ['Gear', 'Canon EOS R6 mark III · Fuji XH-1 · 13mm · 240mm'],
-                ['Approach', 'Street · Portrait · Documentary'],
-                ['Based', 'Prague, CZ'],
+                ['Gear', 'Anything that has a lens'],
+                ['Based', 'Brno, CZ'],
               ].map(([label, value]) => (
                 <div
                   key={label}

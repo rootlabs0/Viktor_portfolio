@@ -17,32 +17,31 @@ interface Photo {
   h: number
   src: string
   label: string
-  meta: string   // time & place shown above the card
 }
 
 // Photos shifted left so the collage opens mid-flow — no pre-scroll needed
 const PHOTOS: Photo[] = [
-  { x: 680,  y: '8%',  w: 450, h: 320, src: '/images/DSCF1130-2.jpg',  label: 'COMMERCIAL · 2024', meta: 'Prague, CZ — Spring 2024'      },
-  { x: 1280,  y: '57%', w: 210, h: 300, src: '/images/me-2.jpg',  label: 'FASHION · 2024',    meta: 'Berlin, DE — Feb 2024'         },
-  { x: 1640, y: '12%', w: 380, h: 520, src: '/images/xh1.png',  label: 'CAMERA · 2024',   meta: 'Prague, CZ — Oct 2024'           },
-  { x: 2170, y: '12%', w: 380, h: 520, src: '/images/Document-2.jpg',  label: 'EDITORIAL · 2024',      meta: 'Vienna, AT — Mar 2024'          },
-  { x: 2700, y: '10%', w: 300, h: 215, src: '/images/villa.jpg',  label: 'ARCHITECTURE · 2024',     meta: 'Brno, CZ — Apr 2024'         },
-  { x: 3150, y: '55%', w: 400, h: 300, src: '/images/flowers.jpg',  label: 'NATURE · 2024', meta: 'Brno, CZ — May 2024'    },
-  { x: 3700, y: '20%', w: 255, h: 380, src: '/images/nophotosynthesis-2.jpg',  label: 'ABSTRACT · 2024',  meta: 'Berlin, DE — Jun 2024'          },
-  { x: 4105, y: '28%', w: 500, h: 370, src: '/images/fontana-2.jpg',  label: 'URBAN · 2024',   meta: 'Rome, IT — Jul 2024'      },
-  { x: 4755, y: '16%', w: 240, h: 340, src: '/images/catedral-2.jpg',  label: 'LANDMARK · 2024',   meta: 'Barcelona, ES — Aug 2024'           },
-  { x: 5145, y: '35%', w: 420, h: 280, src: '/images/tram.jpg',  label: 'STREET · 2024',   meta: 'Prague, CZ — Sep 2024'           },
-  { x: 5620, y: '20%', w: 380, h: 480, src: '/images/tisnov train-2.jpg',  label: 'TRANSPORT · 2024',   meta: 'Tišnov, CZ — Oct 2024'           },
-  { x: 6120, y: '10%', w: 340, h: 400, src: '/images/railways man-2.jpg',  label: 'PORTRAIT · 2024',   meta: 'Railways, CZ — Oct 2024'           },
-  { x: 6520, y: '50%', w: 420, h: 280, src: '/images/symmetry-2.jpg',  label: 'ARCHITECTURE · 2024',   meta: 'Czech Republic — Oct 2024'           },
-  { x: 7000, y: '15%', w: 300, h: 500, src: '/images/stairs-2.jpg',  label: 'GEOMETRIC · 2024',   meta: 'Prague, CZ — Oct 2024'           },
-  { x: 7380, y: '40%', w: 480, h: 340, src: '/images/ligthts-2.jpg',  label: 'NIGHT · 2024',   meta: 'Prague, CZ — Oct 2024'           },
-  { x: 7920, y: '25%', w: 360, h: 380, src: '/images/cafe-2.jpg',  label: 'LIFESTYLE · 2024',   meta: 'Prague, CZ — Oct 2024'           },
-  { x: 8340, y: '55%', w: 400, h: 300, src: '/images/skyscrapers-2.jpg',  label: 'URBAN · 2024',   meta: 'Prague, CZ — Oct 2024'           },
-  { x: 8800, y: '12%', w: 350, h: 420, src: '/images/jiggly walk-2.jpg',  label: 'MOTION · 2024',   meta: 'Prague, CZ — Oct 2024'           },
-  { x: 9220, y: '45%', w: 410, h: 310, src: '/images/theathr-2.jpg',  label: 'CULTURAL · 2024',   meta: 'Prague, CZ — Oct 2024'           },
-  { x: 9700, y: '22%', w: 360, h: 400, src: '/images/ruzicka-2.jpg',  label: 'PORTRAIT · 2024',   meta: 'Prague, CZ — Oct 2024'           },
-  { x: 10200, y: '18%', w: 420, h: 520, src: '/images/skyline-2.jpg',   label: 'URBAN · 2024',     meta: 'Czech Republic — 2024'            },
+  { x: 680,  y: '8%',  w: 450, h: 320, src: '/images/DSCF1130-2.jpg',         label: 'LOOKING GOOD · 2026' },
+  { x: 1280,  y: '57%', w: 210, h: 300, src: '/images/me-2.jpg',               label: 'FIRST DATE WITH MY CAMERA · 2026'       },
+  { x: 1640, y: '12%', w: 380, h: 520, src: '/images/xh1.png',                 label: 'FUJIFILM X-H1· 2026'       },
+  { x: 2170, y: '12%', w: 380, h: 520, src: '/images/Document-2.jpg',          label: 'PARK GATE · 2026'  },
+  { x: 2700, y: '10%', w: 300, h: 215, src: '/images/villa.jpg',               label: 'VILLA · 2026'      },
+  { x: 3150, y: '55%', w: 400, h: 300, src: '/images/flowers.jpg',             label: 'BLOOM · 2026'      },
+  { x: 3700, y: '20%', w: 255, h: 380, src: '/images/nophotosynthesis-2.jpg',  label: 'NO PHOTOSYNTHESIS · 2026'   },
+  { x: 4105, y: '28%', w: 500, h: 370, src: '/images/fontana-2.jpg',           label: 'FOUNTAIN · 2026'   },
+  { x: 4755, y: '16%', w: 240, h: 340, src: '/images/catedral-2.jpg',          label: 'CATHEDRAL · 2026'  },
+  { x: 5145, y: '35%', w: 420, h: 280, src: '/images/tram.jpg',                label: 'TRAM · 2026'       },
+  { x: 5620, y: '20%', w: 380, h: 480, src: '/images/tisnov train-2.jpg',      label: 'TRAIN · 2026'      },
+  { x: 6120, y: '10%', w: 340, h: 400, src: '/images/railways man-2.jpg',      label: 'RAILWAYMAN · 2026' },
+  { x: 6520, y: '50%', w: 420, h: 280, src: '/images/symmetry-2.jpg',          label: 'SYMMETRY · 2026'   },
+  { x: 7000, y: '15%', w: 300, h: 500, src: '/images/stairs-2.jpg',            label: 'STAIRS · 2026'     },
+  { x: 7380, y: '40%', w: 480, h: 340, src: '/images/ligthts-2.jpg',           label: 'LIGHTS · 2026'     },
+  { x: 7920, y: '25%', w: 360, h: 380, src: '/images/cafe-2.jpg',              label: 'CAFÉ · 2026'       },
+  { x: 8340, y: '55%', w: 400, h: 300, src: '/images/skyscrapers-2.jpg',       label: 'SUNSCRAPERS · 2026'     },
+  { x: 8800, y: '12%', w: 350, h: 420, src: '/images/jiggly walk-2.jpg',       label: 'JIGGLY WALK · 2026'     },
+  { x: 9220, y: '45%', w: 410, h: 310, src: '/images/theathr-2.jpg',           label: 'THEATRE · 2026'    },
+  { x: 9700, y: '22%', w: 360, h: 400, src: '/images/ruzicka-2.jpg',           label: 'MY BEST SUBJECT · 2026'   },
+  { x: 10200, y: '18%', w: 420, h: 520, src: '/images/skyline-2.jpg',          label: 'SKYLINE · 2026'    },
 ]
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -110,7 +109,6 @@ export default function Services() {
                 style={{ position: 'absolute', left: photo.x, top: photo.y }}
               >
                 <span className="srv-label">{photo.label}</span>
-                <span className="srv-meta">{photo.meta}</span>
                 <img
                   className="srv-card-img"
                   src={photo.src}

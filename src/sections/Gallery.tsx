@@ -35,7 +35,7 @@ export default function Gallery() {
             Weekend gig with Sony
           </motion.h2>
           <p className="gallery-intro">
-            I borrowed a Sony α7 for a week and captured this collection during that time. A fresh perspective with a new camera body, exploring familiar Prague streets and moments through a different lens.
+            I basically borrowed a Sony α7 IV for a weekend and captured this collection during that time. A fresh perspective with a new camera body, exploring moments through a different lens.
           </p>
         </div>
 

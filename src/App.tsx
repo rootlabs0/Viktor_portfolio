@@ -10,6 +10,7 @@ import Transition2 from './sections/Transition2'
 import Gallery from './sections/Gallery'
 import CanonContent from './sections/CanonContent'
 import ZoomParallaxSection from './sections/ZoomParallaxSection'
+import Footer from './sections/Footer'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -41,6 +42,7 @@ function App() {
       <Transition2 />
       <CanonContent />
       <ZoomParallaxSection />
+      <Footer />
     </>
   )
 }

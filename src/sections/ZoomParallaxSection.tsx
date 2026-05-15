@@ -52,7 +52,7 @@ export default function ZoomParallaxSection() {
                 style={{ opacity: textOpacity, y: textY, position: 'relative', zIndex: 1 }}
               >
                 <p className="ultras-eyebrow">Champions League 2026</p>
-                <h2 className="ultras-heading">Passion<br />Hope</h2>
+                <h2 className="ultras-heading">Passion<br />Hope<br />Freedom</h2>
                 <p className="ultras-body">
                   Such a moment doesn't come here and there, you gotta be ready to capture it when it does. 
                 </p>
