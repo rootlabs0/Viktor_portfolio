@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { img } from '../lib/img'
 
 interface Props {
   onComplete: () => void
@@ -106,7 +107,7 @@ export default function SignatureIntro({ onComplete }: Props) {
 
         {/* Desaturated portrait — sits behind the signature */}
         <img
-          src="/images/DSCF1914.jpg"
+          src={img('/images/DSCF1914.jpg')}
           alt=""
           style={{
             position:       'absolute',

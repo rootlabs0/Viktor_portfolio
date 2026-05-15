@@ -1,19 +1,20 @@
 import { useRef, useState } from 'react'
 import { useScroll, useTransform, motion, AnimatePresence } from 'framer-motion'
 import { ScrollTiltedGrid } from '../components/ui/scroll-tilted-grid'
+import { img } from '../lib/img'
 import './Gallery.css'
 
 const SONY_IMAGES: readonly string[] = [
-  '/images/DSC00069.jpg',
-  '/images/DSC00272.jpg',
-  '/images/DSC00314.jpg',
-  '/images/DSC00338-2.jpg',
-  '/images/DSC00491.jpg',
-  '/images/DSC00520-2.jpg',
-  '/images/DSC00531.jpg',
-  '/images/DSC00542.jpg',
-  '/images/liberty.jpg',
-  '/images/DSC00575.jpg',
+  img('/images/DSC00069.jpg'),
+  img('/images/DSC00272.jpg'),
+  img('/images/DSC00314.jpg'),
+  img('/images/DSC00338-2.jpg'),
+  img('/images/DSC00491.jpg'),
+  img('/images/DSC00520-2.jpg'),
+  img('/images/DSC00531.jpg'),
+  img('/images/DSC00542.jpg'),
+  img('/images/liberty.jpg'),
+  img('/images/DSC00575.jpg'),
 ]
 
 export default function Gallery() {

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useMotionValueEvent, useScroll, useTransform, AnimatePresence } from 'framer-motion'
+import { img } from '../lib/img'
 import './Hero.css'
 
 // ─── VZ Signature ──────────────────────────────────────────────────────────────
@@ -349,16 +350,16 @@ function ThumbIcon({
 // ─── Icon definitions ─────────────────────────────────────────────────────────
 
 const PORTFOLIO_IMAGES = [
-  '/images/lemans.jpg',
-  '/images/ucl.jpg',
-  '/images/kostel.jpg',
-  '/images/workses.jpg',
-  '/images/audi.jpg',
-  '/images/sakura.jpg',
-  '/images/dog.jpg',
-  '/images/rs4.jpg',
-  '/images/bayern.jpg',
-  '/images/adri.jpg',
+  img('/images/lemans.jpg'),
+  img('/images/ucl.jpg'),
+  img('/images/kostel.jpg'),
+  img('/images/workses.jpg'),
+  img('/images/audi.jpg'),
+  img('/images/sakura.jpg'),
+  img('/images/dog.jpg'),
+  img('/images/rs4.jpg'),
+  img('/images/bayern.jpg'),
+  img('/images/adri.jpg'),
 ]
 
 // ─── Hero ─────────────────────────────────────────────────────────────────────
@@ -438,7 +439,7 @@ export default function Hero() {
               height: '100%',
               overflow: 'hidden',
               backgroundColor: '#c4b5a8',
-              backgroundImage: 'url(/images/hero.jpg)',
+              backgroundImage: `url(${img('/images/hero.jpg')})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}

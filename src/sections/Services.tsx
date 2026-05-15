@@ -2,6 +2,7 @@ import { useLayoutEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import { motion, AnimatePresence } from 'framer-motion'
+import { img } from '../lib/img'
 import './Services.css'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -21,27 +22,27 @@ interface Photo {
 
 // Photos shifted left so the collage opens mid-flow — no pre-scroll needed
 const PHOTOS: Photo[] = [
-  { x: 680,  y: '8%',  w: 450, h: 320, src: '/images/DSCF1130-2.jpg',         label: 'LOOKING GOOD · 2026' },
-  { x: 1280,  y: '57%', w: 210, h: 300, src: '/images/me-2.jpg',               label: 'FIRST DATE WITH MY CAMERA · 2026'       },
-  { x: 1640, y: '12%', w: 380, h: 520, src: '/images/xh1.png',                 label: 'FUJIFILM X-H1· 2026'       },
-  { x: 2170, y: '12%', w: 380, h: 520, src: '/images/Document-2.jpg',          label: 'PARK GATE · 2026'  },
-  { x: 2700, y: '10%', w: 300, h: 215, src: '/images/villa.jpg',               label: 'VILLA · 2026'      },
-  { x: 3150, y: '55%', w: 400, h: 300, src: '/images/flowers.jpg',             label: 'BLOOM · 2026'      },
-  { x: 3700, y: '20%', w: 255, h: 380, src: '/images/nophotosynthesis-2.jpg',  label: 'NO PHOTOSYNTHESIS · 2026'   },
-  { x: 4105, y: '28%', w: 500, h: 370, src: '/images/fontana-2.jpg',           label: 'FOUNTAIN · 2026'   },
-  { x: 4755, y: '16%', w: 240, h: 340, src: '/images/catedral-2.jpg',          label: 'CATHEDRAL · 2026'  },
-  { x: 5145, y: '35%', w: 420, h: 280, src: '/images/tram.jpg',                label: 'TRAM · 2026'       },
-  { x: 5620, y: '20%', w: 380, h: 480, src: '/images/tisnov train-2.jpg',      label: 'TRAIN · 2026'      },
-  { x: 6120, y: '10%', w: 340, h: 400, src: '/images/railways man-2.jpg',      label: 'RAILWAYMAN · 2026' },
-  { x: 6520, y: '50%', w: 420, h: 280, src: '/images/symmetry-2.jpg',          label: 'SYMMETRY · 2026'   },
-  { x: 7000, y: '15%', w: 300, h: 500, src: '/images/stairs-2.jpg',            label: 'STAIRS · 2026'     },
-  { x: 7380, y: '40%', w: 480, h: 340, src: '/images/ligthts-2.jpg',           label: 'LIGHTS · 2026'     },
-  { x: 7920, y: '25%', w: 360, h: 380, src: '/images/cafe-2.jpg',              label: 'CAFÉ · 2026'       },
-  { x: 8340, y: '55%', w: 400, h: 300, src: '/images/skyscrapers-2.jpg',       label: 'SUNSCRAPERS · 2026'     },
-  { x: 8800, y: '12%', w: 350, h: 420, src: '/images/jiggly walk-2.jpg',       label: 'JIGGLY WALK · 2026'     },
-  { x: 9220, y: '45%', w: 410, h: 310, src: '/images/theathr-2.jpg',           label: 'THEATRE · 2026'    },
-  { x: 9700, y: '22%', w: 360, h: 400, src: '/images/ruzicka-2.jpg',           label: 'MY BEST SUBJECT · 2026'   },
-  { x: 10200, y: '18%', w: 420, h: 520, src: '/images/skyline-2.jpg',          label: 'SKYLINE · 2026'    },
+  { x: 680,  y: '8%',  w: 450, h: 320, src: img('/images/DSCF1130-2.jpg'),         label: 'LOOKING GOOD · 2026' },
+  { x: 1280,  y: '57%', w: 210, h: 300, src: img('/images/me-2.jpg'),               label: 'FIRST DATE WITH MY CAMERA · 2026'       },
+  { x: 1640, y: '12%', w: 380, h: 520, src: img('/images/xh1.png'),                 label: 'FUJIFILM X-H1· 2026'       },
+  { x: 2170, y: '12%', w: 380, h: 520, src: img('/images/Document-2.jpg'),          label: 'PARK GATE · 2026'  },
+  { x: 2700, y: '10%', w: 300, h: 215, src: img('/images/villa.jpg'),               label: 'VILLA · 2026'      },
+  { x: 3150, y: '55%', w: 400, h: 300, src: img('/images/flowers.jpg'),             label: 'BLOOM · 2026'      },
+  { x: 3700, y: '20%', w: 255, h: 380, src: img('/images/nophotosynthesis-2.jpg'),  label: 'NO PHOTOSYNTHESIS · 2026'   },
+  { x: 4105, y: '28%', w: 500, h: 370, src: img('/images/fontana-2.jpg'),           label: 'FOUNTAIN · 2026'   },
+  { x: 4755, y: '16%', w: 240, h: 340, src: img('/images/catedral-2.jpg'),          label: 'CATHEDRAL · 2026'  },
+  { x: 5145, y: '35%', w: 420, h: 280, src: img('/images/tram.jpg'),                label: 'TRAM · 2026'       },
+  { x: 5620, y: '20%', w: 380, h: 480, src: img('/images/tisnov train-2.jpg'),      label: 'TRAIN · 2026'      },
+  { x: 6120, y: '10%', w: 340, h: 400, src: img('/images/railways man-2.jpg'),      label: 'RAILWAYMAN · 2026' },
+  { x: 6520, y: '50%', w: 420, h: 280, src: img('/images/symmetry-2.jpg'),          label: 'SYMMETRY · 2026'   },
+  { x: 7000, y: '15%', w: 300, h: 500, src: img('/images/stairs-2.jpg'),            label: 'STAIRS · 2026'     },
+  { x: 7380, y: '40%', w: 480, h: 340, src: img('/images/ligthts-2.jpg'),           label: 'LIGHTS · 2026'     },
+  { x: 7920, y: '25%', w: 360, h: 380, src: img('/images/cafe-2.jpg'),              label: 'CAFÉ · 2026'       },
+  { x: 8340, y: '55%', w: 400, h: 300, src: img('/images/skyscrapers-2.jpg'),       label: 'SUNSCRAPERS · 2026'     },
+  { x: 8800, y: '12%', w: 350, h: 420, src: img('/images/jiggly walk-2.jpg'),       label: 'JIGGLY WALK · 2026'     },
+  { x: 9220, y: '45%', w: 410, h: 310, src: img('/images/theathr-2.jpg'),           label: 'THEATRE · 2026'    },
+  { x: 9700, y: '22%', w: 360, h: 400, src: img('/images/ruzicka-2.jpg'),           label: 'MY BEST SUBJECT · 2026'   },
+  { x: 10200, y: '18%', w: 420, h: 520, src: img('/images/skyline-2.jpg'),          label: 'SKYLINE · 2026'    },
 ]
 
 // ─── Component ────────────────────────────────────────────────────────────────

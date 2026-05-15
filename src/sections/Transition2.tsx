@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { useScroll, useTransform, motion } from 'framer-motion'
+import { img } from '../lib/img'
 import './Transition2.css'
 
 export default function Transition2() {
@@ -17,13 +18,13 @@ export default function Transition2() {
     <section ref={sectionRef} className="transition2-section">
       <div className="transition2-container">
         <motion.img
-          src="/images/sony-mobile.webp"
+          src={img('/images/sony-mobile.webp')}
           alt="sony camera"
           className="transition2-image"
           style={{ opacity: sonyOpacity, scale }}
         />
         <motion.img
-          src="/images/canon.png"
+          src={img('/images/canon.png')}
           alt="canon camera"
           className="transition2-image transition2-image-canon"
           style={{ opacity: canonOpacity, scale }}

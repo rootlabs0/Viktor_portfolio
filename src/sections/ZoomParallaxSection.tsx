@@ -1,17 +1,18 @@
 import { useRef, useState } from 'react'
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
 import { ZoomParallax } from '../components/ui/zoom-parallax'
+import { img } from '../lib/img'
 import './Gallery.css'
 import './ZoomParallaxSection.css'
 
 const IMAGES = [
-  { src: '/images/ultras.jpg',   alt: 'Le Mans race circuit' },
-  { src: '/images/dembele.jpg',     alt: 'Audi on the road' },
-  { src: '/images/trio.jpg',   alt: 'Sakura blossom' },
-  { src: '/images/finger.jpg',   alt: 'Bayern' },
-  { src: '/images/circle.jpg',      alt: 'UCL' },
-  { src: '/images/olise.jpg',      alt: 'Olise' },
-  { src: '/images/musiala.jpg',     alt: 'Musiala' },
+  { src: img('/images/ultras.jpg'),   alt: 'Le Mans race circuit' },
+  { src: img('/images/dembele.jpg'),  alt: 'Audi on the road' },
+  { src: img('/images/trio.jpg'),     alt: 'Sakura blossom' },
+  { src: img('/images/finger.jpg'),   alt: 'Bayern' },
+  { src: img('/images/circle.jpg'),   alt: 'UCL' },
+  { src: img('/images/olise.jpg'),    alt: 'Olise' },
+  { src: img('/images/musiala.jpg'),  alt: 'Musiala' },
 ]
 
 export default function ZoomParallaxSection() {

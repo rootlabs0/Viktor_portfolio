@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { useScroll, useTransform, motion } from 'framer-motion'
+import { img } from '../lib/img'
 import './Transition.css'
 
 export default function Transition() {
@@ -36,7 +37,7 @@ export default function Transition() {
     <motion.section ref={sectionRef} className="transition-section" style={{ backgroundColor }}>
       <div className="transition-container">
         <motion.img
-          src="/images/xh1.png"
+          src={img('/images/xh1.png')}
           alt="xh1 camera"
           className="transition-image transition-image-xh1"
           style={{
@@ -45,7 +46,7 @@ export default function Transition() {
           }}
         />
         <motion.img
-          src="/images/sony-mobile.webp"
+          src={img('/images/sony-mobile.webp')}
           alt="sony camera"
           className="transition-image"
           style={{
