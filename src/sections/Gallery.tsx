@@ -12,7 +12,7 @@ const SONY_IMAGES: readonly string[] = [
   '/images/DSC00520-2.jpg',
   '/images/DSC00531.jpg',
   '/images/DSC00542.jpg',
-  '/images/DSC00569.jpg',
+  '/images/liberty.jpg',
   '/images/DSC00575.jpg',
 ]
 

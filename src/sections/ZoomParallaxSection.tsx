@@ -31,10 +31,6 @@ export default function ZoomParallaxSection() {
   return (
     <>
       <section className="zoom-parallax-section">
-        <div className="zoom-parallax-header">
-          <h2 className="zoom-parallax-heading">The full picture</h2>
-          <p className="zoom-parallax-sub">Every frame tells a story. Scroll to explore.</p>
-        </div>
         <div ref={parallaxRef} style={{ position: 'relative' }}>
           <ZoomParallax images={IMAGES} onImageClick={setSelectedImage} />
           {/* Text overlay — fades in when ultras.jpg is at fullscreen */}
