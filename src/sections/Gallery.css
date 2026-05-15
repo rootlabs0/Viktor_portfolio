@@ -1,0 +1,204 @@
+.gallery-section {
+  min-height: 100vh;
+  padding: 60px 40px;
+  background: #000000;
+}
+
+.gallery-heading-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 80px;
+}
+
+.gallery-header {
+  max-width: 1400px;
+  margin: 0 auto 0 auto;
+}
+
+.gallery-heading {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: clamp(4rem, 8vw, 8rem);
+  font-weight: 700;
+  color: #ffffff;
+  text-align: left;
+  margin: 0 0 30px 0;
+}
+
+.gallery-intro {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 400;
+  color: #666666;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 0 80px 0;
+}
+
+.gallery-heading-image {
+  height: clamp(80px, 15vw, 160px);
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.gallery-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gallery-card-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.gallery-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gallery-label {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 500;
+  color: #666666;
+  letter-spacing: 0.5px;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-meta {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 400;
+  color: #999999;
+  letter-spacing: 0.3px;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 900px) {
+  .gallery-section {
+    padding: 80px 24px;
+  }
+
+  .gallery-heading {
+    margin-bottom: 20px;
+  }
+
+  .gallery-intro {
+    margin-bottom: 60px;
+    font-size: 1rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+
+  .gallery-card-img {
+    height: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-section {
+    padding: 60px 16px;
+  }
+
+  .gallery-heading {
+    margin-bottom: 16px;
+  }
+
+  .gallery-intro {
+    margin-bottom: 40px;
+    font-size: 0.95rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .gallery-card-img {
+    height: 300px;
+  }
+}
+
+/* ─── Lightbox modal ──────────────────────────────────────────────────────── */
+
+.lightbox-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 95vw;
+  max-height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-width: 95vw;
+  max-height: 95vh;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 1001;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 900px) {
+  .lightbox-close {
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}

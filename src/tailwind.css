@@ -1,0 +1,2 @@
+/* Tailwind utilities — preflight disabled in tailwind.config.js to preserve existing styles */
+@tailwind utilities;
