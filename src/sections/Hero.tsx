@@ -214,31 +214,32 @@ function FolderIcon() {
   )
 }
 
-function IEIcon() {
+function MailIcon() {
   return (
     <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <radialGradient id="ieGrad" cx="40%" cy="35%" r="65%">
-          <stop offset="0%" stopColor="#74b9ff" />
-          <stop offset="100%" stopColor="#0984e3" />
-        </radialGradient>
-      </defs>
-      <circle cx="32" cy="32" r="32" fill="url(#ieGrad)" />
-      {/* Pixel-style "e" */}
-      <rect x="18" y="24" width="28" height="5" fill="white" />
-      <rect x="18" y="24" width="5" height="16" fill="white" />
-      <rect x="18" y="34" width="22" height="5" fill="white" />
-      <rect x="18" y="40" width="28" height="5" fill="white" />
+      <rect width="64" height="64" rx="12" fill="#0a84ff" />
+      <rect x="10" y="18" width="44" height="30" rx="4" fill="white" />
+      <polyline points="10,18 32,36 54,18" fill="none" stroke="#0a84ff" strokeWidth="3" strokeLinejoin="round" />
     </svg>
   )
 }
 
-function FinderIcon() {
+function InstagramIcon() {
   return (
     <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-      <rect width="64" height="64" rx="12" fill="#3498db" />
-      <circle cx="28" cy="28" r="14" fill="none" stroke="white" strokeWidth="5" />
-      <line x1="38" y1="38" x2="52" y2="52" stroke="white" strokeWidth="5" strokeLinecap="round" />
+      <defs>
+        <linearGradient id="igGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#f09433" />
+          <stop offset="25%" stopColor="#e6683c" />
+          <stop offset="50%" stopColor="#dc2743" />
+          <stop offset="75%" stopColor="#cc2366" />
+          <stop offset="100%" stopColor="#bc1888" />
+        </linearGradient>
+      </defs>
+      <rect width="64" height="64" rx="14" fill="url(#igGrad)" />
+      <rect x="14" y="14" width="36" height="36" rx="10" fill="none" stroke="white" strokeWidth="3.5" />
+      <circle cx="32" cy="32" r="9" fill="none" stroke="white" strokeWidth="3.5" />
+      <circle cx="44.5" cy="19.5" r="2.5" fill="white" />
     </svg>
   )
 }
@@ -501,16 +502,20 @@ export default function Hero() {
               onImageClick={() => setSelectedImage(PORTFOLIO_IMAGES[9])}
             />
 
-            {/* ── IE / Explore icon ── */}
+            {/* ── Mail icon ── */}
             <DraggableIcon left="12%" top="15%" index={0} constraintsRef={constraintsRef}>
-              <IEIcon />
-              <IconLabel>Explore</IconLabel>
+              <a href="mailto:vikzatlouk@gmail.com" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textDecoration: 'none' }}>
+                <MailIcon />
+                <IconLabel>Mail</IconLabel>
+              </a>
             </DraggableIcon>
 
-            {/* ── Finder icon ── */}
+            {/* ── Instagram icon ── */}
             <DraggableIcon left="65%" top="42%" index={1} constraintsRef={constraintsRef}>
-              <FinderIcon />
-              <IconLabel>Finder</IconLabel>
+              <a href="https://www.instagram.com/viktorasxz/" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textDecoration: 'none' }}>
+                <InstagramIcon />
+                <IconLabel>Social</IconLabel>
+              </a>
             </DraggableIcon>
 
             {/* ── Retro app icon ── */}
@@ -520,7 +525,7 @@ export default function Hero() {
             </DraggableIcon>
 
             {/* ── Folder icon ── */}
-            <DraggableIcon left="88%" top="63%" index={13} constraintsRef={constraintsRef}>
+            <DraggableIcon left="88%" top="78%" index={13} constraintsRef={constraintsRef}>
               <FolderIcon />
               <IconLabel>Culture</IconLabel>
             </DraggableIcon>
