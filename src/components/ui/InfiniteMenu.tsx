@@ -585,7 +585,7 @@ class InfiniteGridMenu {
   }
 }
 
-export default function InfiniteMenu({ items = [], scale = 1.0 }) {
+export default function InfiniteMenu({ items = [], scale = 1.0 }: { items?: { image: string; link: string; title: string; description: string }[]; scale?: number }) {
   const canvasRef = useRef(null);
   const [activeItem, setActiveItem] = useState(null);
   const [isMoving, setIsMoving] = useState(false);
